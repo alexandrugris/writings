@@ -1,0 +1,37 @@
+:root{color-scheme:light;--paper:#f2f1ed;--ink:#171717;--muted:#64645f;--line:#c8c7c1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:5px}
+.skip-link{position:absolute;top:-4rem;left:1rem;background:var(--ink);color:#fff;padding:.7rem 1rem;z-index:10;font:600 .75rem Arial,sans-serif}
+.skip-link:focus{top:1rem}
+.site-header{height:83px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,88px);border-bottom:1px solid var(--line)}
+.wordmark{font-size:2rem;line-height:1;text-decoration:none;font-weight:bold;letter-spacing:-.09em}
+.wordmark span,h1 span,h2 span{color:#777771}
+.header-note,.header-link,.eyebrow,.intro-aside,.work-meta,.read-link,.site-footer{font-family:Arial,Helvetica,sans-serif}
+.header-note{text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;color:var(--muted);margin-left:4rem}
+.header-link{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:7px;white-space:nowrap}
+.header-link span,.read-link span{font-size:1.1rem;margin-left:.7rem;display:inline-block;transition:transform .2s ease}
+.header-link:hover span,.read-link:hover span{transform:translate(3px,-3px)}
+.intro{max-width:1600px;margin:auto;min-height:338px;padding:64px clamp(24px,5vw,88px) 52px;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem}
+.eyebrow{display:flex;align-items:center;gap:1rem;margin:0 0 17px;text-transform:uppercase;letter-spacing:.17em;font-size:.64rem;font-weight:700;color:#4e4e49}
+.eyebrow-line{width:30px;height:1px;background:var(--ink)}
+h1{font-size:clamp(5rem,12vw,10.5rem);line-height:.83;letter-spacing:-.085em;font-weight:400;margin:0}
+.intro-deck{font-size:clamp(1.05rem,1.6vw,1.35rem);margin:30px 0 0;color:#393935}
+.intro-aside{margin:0 0 3px;font-size:.76rem;line-height:1.65;letter-spacing:.03em;color:var(--muted);text-align:right}
+.works{max-width:1600px;margin:0 auto;padding:0 clamp(24px,5vw,88px) 110px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,34px)}
+.work{min-width:0;border-top:1px solid var(--ink);padding-top:15px}
+.work-image-link{display:block;background:#e7e6e1;overflow:hidden}
+.work-image-link img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;filter:grayscale(1);transition:transform .45s ease}
+.work-image-link:hover img{transform:scale(1.025)}
+.work-info{padding-top:20px}
+.work-meta{display:flex;justify-content:space-between;gap:1rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);font-size:.62rem}
+h2{font-size:clamp(2.4rem,3.5vw,4rem);font-weight:400;line-height:.95;letter-spacing:-.065em;margin:28px 0 15px;overflow-wrap:anywhere}
+.work-info p{max-width:24rem;min-height:3.7em;color:#4b4b46;font-size:1.02rem;line-height:1.55;margin:0 0 23px}
+.read-link{display:inline-flex;align-items:center;border-bottom:1px solid var(--ink);padding:0 0 7px;text-decoration:none;text-transform:uppercase;letter-spacing:.13em;font-size:.67rem;font-weight:bold}
+.site-footer{border-top:1px solid var(--line);min-height:90px;margin:0 clamp(24px,5vw,88px);display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.14em}
+.site-footer a{text-decoration:none;color:var(--ink)}
+@media(max-width:900px){.intro{min-height:300px}.works{grid-template-columns:repeat(2,minmax(0,1fr))}.work:last-child{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:25px}.work:last-child .work-info{padding-top:0}.work-info p{min-height:0}}
+@media(max-width:640px){.site-header{height:67px}.header-note{display:none}.intro{display:block;min-height:auto;padding-top:57px;padding-bottom:55px}.intro-aside{text-align:left;margin-top:36px}.works{grid-template-columns:1fr;gap:60px;padding-bottom:85px}.work:last-child{display:block;grid-column:auto}.work:last-child .work-info{padding-top:20px}.work-meta{font-size:.65rem}h2{font-size:3.4rem}.work-info p{font-size:1.06rem}.site-footer{min-height:80px}.site-footer span{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.work-image-link img,.header-link span,.read-link span{transition:none}}
