@@ -36,6 +36,26 @@ This regenerates each work's HTML from its text source, copies the CSS, JS and
 images into `dist/`, then walks every page and fails if any link, image or
 in-page anchor points at something that does not exist.
 
+## Images
+
+The sketches are stored as **grayscale WebP at quality 82**. Every image on the
+site is rendered through `filter: grayscale(1)` in CSS, so the colour in the
+originals was never displayed — only weight. Baking the grayscale in and
+encoding WebP takes the artwork from 48 MB to 4.7 MB with no visible change at
+100% zoom. Dimensions are untouched, so nothing was resampled.
+
+Got a new sketch? Drop the PNG in `hub/assets/` or `works/<slug>/assets/`, point
+the page at it, then:
+
+```bash
+python3 tools/optimize_images.py
+```
+
+It grayscales and converts every PNG it finds and deletes the original. Until
+you fix the reference, `python3 build.py` will report the `.png` as a broken
+link — that is the safety net. The colour originals live in the git history and
+in the untouched clones under `../originals/`.
+
 ## Publish
 
 `dist/` works from the root of any static host, and also from a subdirectory,

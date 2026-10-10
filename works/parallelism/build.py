@@ -51,7 +51,7 @@ for index, call in enumerate(calls, start=1):
     illustration = ""
     if index == 2:
         illustration = '''<figure class="call-figure two-rooms">
-            <div class="figure-frame"><img src="assets/two-rooms.png" alt="Two people in separate rooms look at their phones across a wide blank space." loading="lazy" decoding="async"></div>
+            <div class="figure-frame"><img src="assets/two-rooms.webp" alt="Two people in separate rooms look at their phones across a wide blank space." loading="lazy" decoding="async"></div>
             <figcaption>Two rooms, one conversation <span aria-hidden="true">/ 02</span></figcaption>
           </figure>'''
     dialogue = "\n".join(render_line(line, index) for line in call["dialogue"])
@@ -76,7 +76,7 @@ html = f'''<!doctype html>
   <meta name="theme-color" content="#f4f4f4">
   <meta name="description" content="Parallelism: an illustrated poem in three late-night conversations.">
   <title>Parallelism — An Illustrated Poem</title>
-  <link rel="preload" as="image" href="assets/phone-lights-up.png">
+  <link rel="preload" as="image" href="assets/phone-lights-up.webp">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -100,7 +100,7 @@ html = f'''<!doctype html>
         <p class="hero-description">A phone lights up. Then it lights up again.</p>
         <div class="hero-foot"><a class="begin-link" href="#poem">Begin reading <span aria-hidden="true">↘</span></a><span>~{read_minutes} min read</span></div>
       </div>
-      <figure class="hero-figure"><img src="assets/phone-lights-up.png" alt="A person on a bed looks at a glowing phone while an empty chair faces them across the room." fetchpriority="high"><figcaption>01 / The phone lights up</figcaption></figure>
+      <figure class="hero-figure"><img src="assets/phone-lights-up.webp" alt="A person on a bed looks at a glowing phone while an empty chair faces them across the room." fetchpriority="high"><figcaption>01 / The phone lights up</figcaption></figure>
       <div class="hero-lines" aria-hidden="true"><i></i><i></i></div>
     </section>
 
@@ -108,7 +108,7 @@ html = f'''<!doctype html>
 
     {''.join(rendered_calls)}
 
-    <figure class="closing-figure"><img src="assets/parallel-paths.png" alt="Two figures walk separate paths toward a shared horizon under telephone wires." loading="lazy" decoding="async"><figcaption>Two paths <span aria-hidden="true">/ 03</span></figcaption></figure>
+    <figure class="closing-figure"><img src="assets/parallel-paths.webp" alt="Two figures walk separate paths toward a shared horizon under telephone wires." loading="lazy" decoding="async"><figcaption>Two paths <span aria-hidden="true">/ 03</span></figcaption></figure>
     <div class="endpiece"><span aria-hidden="true">∥</span><p>End of poem</p><a href="#top">Back to the beginning <span aria-hidden="true">↑</span></a></div>
   </main>
   <footer class="site-footer">

@@ -19,9 +19,9 @@ CHAPTERS = {
 }
 
 ILLUSTRATIONS = {
-    ("Friday", "9:30 PM"): ("doner-shop.png", "A table for one", "A man and a woman sit apart in a late-night fast-food shop."),
-    ("Saturday", "9:00 PM"): ("lovers-become-trees.png", "The lovers become trees", "An elderly couple on a bench take root beneath two intertwined trees."),
-    ("Sunday", "10:00 AM"): ("winter-room.png", "Winter in the room", "An empty apartment and a window covered by a blizzard."),
+    ("Friday", "9:30 PM"): ("doner-shop.webp", "A table for one", "A man and a woman sit apart in a late-night fast-food shop."),
+    ("Saturday", "9:00 PM"): ("lovers-become-trees.webp", "The lovers become trees", "An elderly couple on a bench take root beneath two intertwined trees."),
+    ("Sunday", "10:00 AM"): ("winter-room.webp", "Winter in the room", "An empty apartment and a window covered by a blizzard."),
 }
 
 
@@ -113,7 +113,7 @@ page = f'''<!doctype html>
   <meta name="theme-color" content="#f5f5f5">
   <meta name="description" content="Friday: an illustrated story of solitude, imagined love, changing weather, and the lives that fill a room.">
   <title>Friday — An Illustrated Story</title>
-  <link rel="preload" as="image" href="assets/rain-walk.png">
+  <link rel="preload" as="image" href="assets/rain-walk.webp">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -142,7 +142,7 @@ page = f'''<!doctype html>
         </div>
       </div>
       <figure class="hero-art">
-        <img src="assets/rain-walk.png" alt="A solitary figure walks a rain-soaked city street beneath umbrellas and tram wires." fetchpriority="high">
+        <img src="assets/rain-walk.webp" alt="A solitary figure walks a rain-soaked city street beneath umbrellas and tram wires." fetchpriority="high">
         <figcaption>Fig. 01 <span aria-hidden="true">—</span> The walk home</figcaption>
       </figure>
       <div class="hero-vertical" aria-hidden="true">Rain / longing / time</div>

@@ -12,10 +12,10 @@ OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 SOURCE = (ROOT / "poems.md").read_text(encoding="utf-8")
 EXPECTED = ["Impossibility", "Hurt", "Holding Hands", "Geometry"]
 IMAGE = {
-    "Impossibility": ("impossibility.png", "Two people meet each other's gaze across a crowded dinner table."),
-    "Hurt": ("hurt.png", "Two people stand within a fragile, cracking cage of drawn domestic lines."),
-    "Holding Hands": ("holding-hands.png", "Two people sit apart on a bench while their hands remain clasped."),
-    "Geometry": ("geometry.png", "A precise geometric grid breaks into wild drawn lines and open landscape."),
+    "Impossibility": ("impossibility.webp", "Two people meet each other's gaze across a crowded dinner table."),
+    "Hurt": ("hurt.webp", "Two people stand within a fragile, cracking cage of drawn domestic lines."),
+    "Holding Hands": ("holding-hands.webp", "Two people sit apart on a bench while their hands remain clasped."),
+    "Geometry": ("geometry.webp", "A precise geometric grid breaks into wild drawn lines and open landscape."),
 }
 
 poems = []
@@ -97,7 +97,7 @@ html = f'''<!doctype html>
   <meta name="theme-color" content="#f4f4f4">
   <meta name="description" content="Torments: four illustrated poems — Impossibility, Hurt, Holding Hands, and Geometry.">
   <title>Torments — Four Illustrated Poems</title>
-  <link rel="preload" as="image" href="assets/impossibility.png">
+  <link rel="preload" as="image" href="assets/impossibility.webp">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -115,7 +115,7 @@ html = f'''<!doctype html>
         <div class="hero-index"><span>01</span><span>Impossibility</span><span aria-hidden="true">—</span><span>04</span><span>Geometry</span></div>
       </div>
       <figure class="hero-figure">
-        <img class="hero-image" src="assets/impossibility.png" alt="Two people exchange a charged glance across a crowded dinner table." fetchpriority="high">
+        <img class="hero-image" src="assets/impossibility.webp" alt="Two people exchange a charged glance across a crowded dinner table." fetchpriority="high">
         <figcaption>I / Impossibility</figcaption>
       </figure>
     </section>
