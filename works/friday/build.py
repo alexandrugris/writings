@@ -113,6 +113,24 @@ page = f'''<!doctype html>
   <meta name="theme-color" content="#f5f5f5">
   <meta name="description" content="Friday: an illustrated story of solitude, imagined love, changing weather, and the lives that fill a room.">
   <title>Friday — An Illustrated Story</title>
+  <link rel="canonical" href="https://alexandrugris.ro/literature/friday/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alexandru Gris">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Friday — An Illustrated Story">
+  <meta property="og:description" content="Friday: an illustrated story of solitude, imagined love, changing weather, and the lives that fill a room.">
+  <meta property="og:url" content="https://alexandrugris.ro/literature/friday/">
+  <meta property="og:image" content="https://alexandrugris.ro/literature/assets/og-friday.jpg">
+  <meta property="og:image:secure_url" content="https://alexandrugris.ro/literature/assets/og-friday.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Charcoal drawing of people walking away down a rain-soaked street, one carrying an umbrella.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Friday — An Illustrated Story">
+  <meta name="twitter:description" content="Friday: an illustrated story of solitude, imagined love, changing weather, and the lives that fill a room.">
+  <meta name="twitter:image" content="https://alexandrugris.ro/literature/assets/og-friday.jpg">
+  <meta name="twitter:image:alt" content="Charcoal drawing of people walking away down a rain-soaked street, one carrying an umbrella.">
   <link rel="preload" as="image" href="assets/rain-walk.webp">
   <link rel="stylesheet" href="style.css">
 </head>

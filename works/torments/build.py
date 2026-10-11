@@ -97,6 +97,24 @@ html = f'''<!doctype html>
   <meta name="theme-color" content="#f4f4f4">
   <meta name="description" content="Torments: four illustrated poems — Impossibility, Hurt, Holding Hands, and Geometry.">
   <title>Torments — Four Illustrated Poems</title>
+  <link rel="canonical" href="https://alexandrugris.ro/literature/torments/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alexandru Gris">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Torments — Four Illustrated Poems">
+  <meta property="og:description" content="Torments: four illustrated poems — Impossibility, Hurt, Holding Hands, and Geometry.">
+  <meta property="og:url" content="https://alexandrugris.ro/literature/torments/">
+  <meta property="og:image" content="https://alexandrugris.ro/literature/assets/og-torments.jpg">
+  <meta property="og:image:secure_url" content="https://alexandrugris.ro/literature/assets/og-torments.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Charcoal drawing of two figures sitting apart on a bench in a winter landscape.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Torments — Four Illustrated Poems">
+  <meta name="twitter:description" content="Torments: four illustrated poems — Impossibility, Hurt, Holding Hands, and Geometry.">
+  <meta name="twitter:image" content="https://alexandrugris.ro/literature/assets/og-torments.jpg">
+  <meta name="twitter:image:alt" content="Charcoal drawing of two figures sitting apart on a bench in a winter landscape.">
   <link rel="preload" as="image" href="assets/impossibility.webp">
   <link rel="stylesheet" href="style.css">
 </head>
