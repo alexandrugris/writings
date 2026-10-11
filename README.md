@@ -36,7 +36,34 @@ This regenerates each work's HTML from its text source, copies the CSS, JS and
 images into `dist/`, then walks every page and fails if any link, image or
 in-page anchor points at something that does not exist.
 
+### `dist/` is wiped, not merged — edit the source
+
+`build.py` starts with `shutil.rmtree(DIST)` and rebuilds from `hub/` and
+`works/`. **Anything you add directly to `dist/` is destroyed by the next
+build**, silently, with no warning. This is not hypothetical: the four social
+preview cards (`og-*.jpg`) and every `og:`/`twitter:` tag and `rel=canonical`
+originally lived only in `dist/`, and a rebuild deleted all of them.
+
+So:
+
+- a card or asset belongs in `hub/assets/` — `copy_static()` copies it to `dist/assets/`
+- a tag belongs in `hub/index.html`, or in the `page = f'''…'''` head template of
+  the relevant `works/<slug>/build.py`
+
+After editing anything that the build generates, run `python3 build.py` and
+confirm with `git status dist` that it produced what you intended.
+
 ## Deploying to alexandrugris.ro
+
+**The estate-wide way is one command**, which deploys all four sites, rebuilds
+the sitemap and verifies the result:
+
+```bash
+"~/Downloads/Personal Website/tools/deploy.sh"
+```
+
+It runs `build.py` for this repo, so the manual sequence below is only a
+fallback when you need to deploy just this one site.
 
 Live at **https://alexandrugris.ro/literature/**, served from the `literature/`
 subdirectory of that site's docroot on the Hetzner VPS.
