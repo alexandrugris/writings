@@ -55,7 +55,12 @@ confirm with `git status dist` that it produced what you intended.
 
 ## Deploying to alexandrugris.ro
 
-**The estate-wide way is one command**, which deploys all four sites, rebuilds
+This repo is one of five in the **alexandrugris.ro** estate; the full map
+(sibling repos, docroot paths, source paths on the live host, nginx notes)
+lives in `~/Downloads/Personal Website/AGENTS.md`, and the deploy script
+lives in `~/Downloads/Personal Website/tools/deploy.sh`.
+
+**The estate-wide way is one command**, which deploys all five sites, rebuilds
 the sitemap and verifies the result:
 
 ```bash
