@@ -123,6 +123,25 @@ def check_links() -> int:
     return len(problems)
 
 
+def link_external_sibling(slug: str, sibling_repo: str) -> None:
+    """If a sibling repo's dist/ is on disk, expose it under dist/<slug>/.
+
+    This is a post-build hook for cross-repo sub-sites that live in their
+    own working tree but are served under the literature estate — the FBD
+    being the example. Without it, ``clean_dist()`` runs first and the
+    link-checker reports the link as broken even though it resolves on
+    the live (or test) docroot via a symlink.
+
+    The symlink is local-only; it is created in the ``dist`` working tree
+    and is not staged in git. The link-checker accepts it because the
+    resolved target exists.
+    """
+    sibling_dist = ROOT.parent / sibling_repo / "dist"
+    target = DIST / slug
+    if sibling_dist.is_dir() and not target.exists():
+        target.symlink_to(sibling_dist.resolve())
+
+
 def main() -> None:
     print(f"Building {ROOT.name} -> {DIST.relative_to(ROOT)}/")
     clean_dist()
@@ -131,6 +150,8 @@ def main() -> None:
     for slug in ORDER:
         print(f" {slug}")
         build_work(slug)
+    # Cross-repo siblings: expose them under dist/ before the link-checker runs.
+    link_external_sibling("friday-bd", "friday-bande-dessinee")
     print(" links")
     broken = check_links()
     if broken:
