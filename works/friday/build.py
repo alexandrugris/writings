@@ -110,10 +110,10 @@ page = f'''<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/assets/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="icon" href="/assets/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32x32.png?v=2" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/favicon-16x16.png?v=2" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
   <meta name="theme-color" content="#f5f5f5">
   <meta name="description" content="Friday: an illustrated story of solitude, imagined love, changing weather, and the lives that fill a room.">
   <title>Friday — An Illustrated Story</title>
