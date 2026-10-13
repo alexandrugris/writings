@@ -31,7 +31,9 @@ SKIP_SCHEMES = ("http://", "https://", "//", "mailto:", "tel:", "data:", "javasc
 # checker resolves against DIST and would otherwise call these broken.
 # friday-bd/ is the bande dessinee of the Friday text, built by
 # friday-bande-dessinee and deployed to /literature/friday-bd/.
-SIBLING_SITES = ("friday-bd/",)
+# /assets/ is the site-wide shared assets directory at the docroot, owned by the
+# alexandrugris.ro repo — it holds the favicon set referenced by every page.
+SIBLING_SITES = ("friday-bd/", "/assets/")
 
 
 def clean_dist() -> None:
