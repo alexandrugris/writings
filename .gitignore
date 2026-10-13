@@ -1,6 +1,3 @@
 __pycache__/
 *.pyc
 .DS_Store
-# Local-only symlink that build.py recreates after each build;
-# never staged in git.
-dist/friday-bd

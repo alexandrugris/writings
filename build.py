@@ -26,6 +26,13 @@ ORDER = ("friday", "parallelism", "torments")
 STATIC = ("style.css", "script.js", "assets")
 SKIP_SCHEMES = ("http://", "https://", "//", "mailto:", "tel:", "data:", "javascript:")
 
+# Sibling sites that live in the docroot but are built from their own repos,
+# so their files are legitimately absent from this repo's dist/. The link
+# checker resolves against DIST and would otherwise call these broken.
+# friday-bd/ is the bande dessinee of the Friday text, built by
+# friday-bande-dessinee and deployed to /literature/friday-bd/.
+SIBLING_SITES = ("friday-bd/",)
+
 
 def clean_dist() -> None:
     if DIST.exists():
@@ -97,6 +104,9 @@ def check_links() -> int:
         for tag, attr, value in parser.refs:
             if value.startswith(SKIP_SCHEMES):
                 continue
+            if value.startswith(SIBLING_SITES):
+                checked += 1
+                continue
             path_part, _, fragment = value.partition("#")
             if not path_part:  # same-page anchor, e.g. href="#friday"
                 checked += 1
@@ -123,25 +133,6 @@ def check_links() -> int:
     return len(problems)
 
 
-def link_external_sibling(slug: str, sibling_repo: str) -> None:
-    """If a sibling repo's dist/ is on disk, expose it under dist/<slug>/.
-
-    This is a post-build hook for cross-repo sub-sites that live in their
-    own working tree but are served under the literature estate — the FBD
-    being the example. Without it, ``clean_dist()`` runs first and the
-    link-checker reports the link as broken even though it resolves on
-    the live (or test) docroot via a symlink.
-
-    The symlink is local-only; it is created in the ``dist`` working tree
-    and is not staged in git. The link-checker accepts it because the
-    resolved target exists.
-    """
-    sibling_dist = ROOT.parent / sibling_repo / "dist"
-    target = DIST / slug
-    if sibling_dist.is_dir() and not target.exists():
-        target.symlink_to(sibling_dist.resolve())
-
-
 def main() -> None:
     print(f"Building {ROOT.name} -> {DIST.relative_to(ROOT)}/")
     clean_dist()
@@ -150,8 +141,7 @@ def main() -> None:
     for slug in ORDER:
         print(f" {slug}")
         build_work(slug)
-    # Cross-repo siblings: expose them under dist/ before the link-checker runs.
-    link_external_sibling("friday-bd", "friday-bande-dessinee")
+    # Cross-repo siblings (friday-bd/) are linked, not symlinked: see SIBLING_SITES.
     print(" links")
     broken = check_links()
     if broken:
