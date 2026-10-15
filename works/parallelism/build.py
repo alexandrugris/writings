@@ -78,14 +78,14 @@ html = f'''<!doctype html>
   <link rel="icon" href="/assets/favicon-16x16.png?v=2" sizes="16x16" type="image/png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
   <meta name="theme-color" content="#f4f4f4">
-  <meta name="description" content="Parallelism: two voices in three late-night conversations, told as an illustrated dialogue.">
-  <title>Parallelism — Two Voices</title>
+  <meta name="description" content="Parallelism: an illustrated poem in three late-night conversations.">
+  <title>Parallelism — An Illustrated Poem</title>
   <link rel="canonical" href="https://alexandrugris.ro/literature/parallelism/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alexandru Gris">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Parallelism — Two Voices">
-  <meta property="og:description" content="Parallelism: two voices in three late-night conversations, told as an illustrated dialogue.">
+  <meta property="og:title" content="Parallelism — An Illustrated Poem">
+  <meta property="og:description" content="Parallelism: an illustrated poem in three late-night conversations.">
   <meta property="og:url" content="https://alexandrugris.ro/literature/parallelism/">
   <meta property="og:image" content="https://alexandrugris.ro/literature/assets/og-parallelism.jpg">
   <meta property="og:image:secure_url" content="https://alexandrugris.ro/literature/assets/og-parallelism.jpg">
@@ -94,19 +94,19 @@ html = f'''<!doctype html>
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Charcoal drawing of two people in separate rooms, each lit by the glow of a phone.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Parallelism — Two Voices">
-  <meta name="twitter:description" content="Parallelism: two voices in three late-night conversations, told as an illustrated dialogue.">
+  <meta name="twitter:title" content="Parallelism — An Illustrated Poem">
+  <meta name="twitter:description" content="Parallelism: an illustrated poem in three late-night conversations.">
   <meta name="twitter:image" content="https://alexandrugris.ro/literature/assets/og-parallelism.jpg">
   <meta name="twitter:image:alt" content="Charcoal drawing of two people in separate rooms, each lit by the glow of a phone.">
   <link rel="preload" as="image" href="assets/phone-lights-up.webp">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#poem">Skip to the dialogue</a>
+  <a class="skip-link" href="#poem">Skip to poem</a>
   <div class="progress" aria-hidden="true"><span id="progress-fill"></span></div>
   <header class="site-header">
     <a class="monogram" href="#top" aria-label="Parallelism, back to top">∥</a>
-    <span class="site-kind">An illustrated dialogue</span>
+    <span class="site-kind">An illustrated poem</span>
     <nav class="call-nav" aria-label="Conversations">
       <a href="#call-1">I <span>1:00 AM</span></a>
       <a href="#call-2">II <span>12:00 AM</span></a>
@@ -117,7 +117,7 @@ html = f'''<!doctype html>
   <main id="top">
     <section class="hero" aria-labelledby="title">
       <div class="hero-copy">
-        <p class="kicker"><span aria-hidden="true">↳</span> Dialogue / three conversations</p>
+        <p class="kicker"><span aria-hidden="true">↳</span> Poetry / three conversations</p>
         <h1 id="title"><span>Parallel</span><span>ism<span class="title-dot">.</span></span></h1>
         <p class="hero-description">A phone lights up. Then it lights up again.</p>
         <div class="hero-foot"><a class="begin-link" href="#poem">Begin reading <span aria-hidden="true">↘</span></a><span>~{read_minutes} min read</span></div>
@@ -131,7 +131,7 @@ html = f'''<!doctype html>
     {''.join(rendered_calls)}
 
     <figure class="closing-figure"><img src="assets/parallel-paths.webp" alt="Two figures walk separate paths toward a shared horizon under telephone wires." loading="lazy" decoding="async"><figcaption>Two paths <span aria-hidden="true">/ 03</span></figcaption></figure>
-    <div class="endpiece"><span aria-hidden="true">∥</span><p>End of the dialogue</p><a href="#top">Back to the beginning <span aria-hidden="true">↑</span></a></div>
+    <div class="endpiece"><span aria-hidden="true">∥</span><p>End of poem</p><a href="#top">Back to the beginning <span aria-hidden="true">↑</span></a></div>
   </main>
   <footer class="site-footer">
     <span>Parallelism</span>
