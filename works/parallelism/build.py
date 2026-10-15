@@ -117,7 +117,7 @@ html = f'''<!doctype html>
   <main id="top">
     <section class="hero" aria-labelledby="title">
       <div class="hero-copy">
-        <p class="kicker"><span aria-hidden="true">↳</span> Poetry / three conversations</p>
+        <p class="kicker"><span aria-hidden="true">↳</span> Dialogue / three conversations</p>
         <h1 id="title"><span>Parallel</span><span>ism<span class="title-dot">.</span></span></h1>
         <p class="hero-description">A phone lights up. Then it lights up again.</p>
         <div class="hero-foot"><a class="begin-link" href="#poem">Begin reading <span aria-hidden="true">↘</span></a><span>~{read_minutes} min read</span></div>
